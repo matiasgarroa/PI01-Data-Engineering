@@ -41,10 +41,10 @@ Como parte del equipo de data de una empresa, el área de análisis de datos le 
 
 + Cambio de formato de fecha a **`AAAA-mm-dd`**
 
-+ Los campos de texto pasan a estar en **minúsculas**, sin excepciones
-
 + El campo ***duration*** se divide en dos campos: **`duration_int`** y **`duration_type`**. El primero de tipo integer y el segundo de tipo string indicando la unidad de medición de duración: min (minutos) o season (temporadas)
 
++ Los campos de texto pasan a estar en **minúsculas**, sin excepciones
+  
 <br/>
 
 **`Desarrollo API`**:  Para disponibilizar los datos la empresa usa el framework ***FastAPI***. El analista de datos requiere consultar:
