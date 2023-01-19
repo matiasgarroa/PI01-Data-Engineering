@@ -1,1 +1,1 @@
-{"id":"3961f3e1-7afc-4d73-93dc-d4e9b594d2d7","space":48453,"runtime":"python3.9","name":"PI01-Data-Engineering","path":"jq9i8n","project":"e0ajelj3","account":"144798365827","region":"sa-east-1","deps":null,"envs":null,"public":true,"log_level":"off","cron":""}
+{"id":"774d7882-ac06-4b1a-ab67-2f21efdbfea7","space":48453,"runtime":"python3.9","name":"PI01-Data-Engineering","path":"8wj1za","project":"e0ajelj3","account":"144798365827","region":"sa-east-1","deps":["fastapi","pandas"],"envs":null,"public":true,"log_level":"debug","cron":""}
