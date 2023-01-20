@@ -2,7 +2,9 @@ import pandas as pd
 
 plataformas_df = pd.read_csv('plataformas_df.csv')
 
-#Las siguientes funciones son las que ejecutaremos en la API. Estarán explicadas en el README.md
+#Las siguientes funciones son las que ejecutaremos en la API.
+
+#Cantidad de veces que aparece una keyword en el título de peliculas/series, por plataforma
 
 def get_word_count(keyword, plataforma):
     
@@ -19,6 +21,8 @@ def get_word_count(keyword, plataforma):
     elif cantidad > 1:
         return ('La palabra ' + keyword + ' se encuentra ' + str(cantidad) + ' veces en los titulos de ' + plataforma.capitalize())
 
+#Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
+
 def get_score_count(plataforma, puntaje, anho):
 
     cantidad = ((plataformas_df['platform'] == plataforma) & (plataformas_df['score'] > puntaje) & (plataformas_df['release_year'] == anho) & (plataformas_df['duration_type'] == "min")).sum()
@@ -30,6 +34,8 @@ def get_score_count(plataforma, puntaje, anho):
     elif cantidad > 1:
         return ('Se encontraron ' + str(cantidad) + ' peliculas con mas de ' + str(puntaje) + ' puntos en ' + plataforma.capitalize())
     
+#La segunda película con mayor score para una plataforma determinada, según el orden alfabético de los títulos.
+
 def get_second_score(plataforma):
 
     resultado = plataformas_df[(plataformas_df['type'] == 'movie') & (plataformas_df['platform']== plataforma)]
@@ -41,6 +47,8 @@ def get_second_score(plataforma):
     pelicula = pelicula[1]
     return str(pelicula), str(max_score)
 
+#Película que más duró según año, plataforma y tipo de duración
+
 def get_longest(plataforma, min_o_season, anho):
     resultado = plataformas_df[(plataformas_df['platform']==plataforma) & (plataformas_df['release_year']==anho) & (plataformas_df['duration_type'] == min_o_season)]
 
@@ -49,6 +57,8 @@ def get_longest(plataforma, min_o_season, anho):
     pelicula = pelicula.to_list()
     pelicula = pelicula[0]
     return pelicula, str(max_duration) + ' ' + str(min_o_season)
+
+#Cantidad de series y películas por rating
 
 def get_rating_count(rating):
         cantidad = (plataformas_df['rating'].str.contains(rating)).sum()
