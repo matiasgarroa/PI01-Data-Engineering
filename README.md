@@ -71,7 +71,7 @@ Como parte del equipo de data de una empresa, el área de análisis de datos le 
 
 <br/>
 
-**`Video`**: Click [aquí]() para ver un pequeño resumen
+**`Video`**: Click [aquí](https://drive.google.com/file/d/17gLBc4XtgWop3dHuooTPiwhvnvT0qcCY/view?usp=sharing) para ver un pequeño resumen
 <br/>
 **`Contacto`**: Tambien dejo mi perfil de [LinkedIn](https://www.linkedin.com/in/mat%C3%ADasgarroalou/), donde estaré publicando proximos proyectos
 
