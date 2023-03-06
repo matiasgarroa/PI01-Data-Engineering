@@ -21,7 +21,7 @@ En este proyecto, me desempeñé como parte del equipo de data de una empresa. E
 <p align=center>
 <img src = 'https://i.ibb.co/9t3dD7D/blog-zenvia-imagens-3.png' height=250><p>
 
-## **`Transformaciones`**
+## Transformaciones
 
 Para este proyecto, se realizaron las siguientes transformaciones en los datos:
 
@@ -33,7 +33,7 @@ Para este proyecto, se realizaron las siguientes transformaciones en los datos:
   
 <br/>
 
-## **`Desarrollo API`**
+## Desarrollo API
 
 Para disponibilizar los datos, se construyó una API usando el framework FastAPI. Los analistas de datos requieren consultar la siguiente información:
 
@@ -53,20 +53,20 @@ Para disponibilizar los datos, se construyó una API usando el framework FastAPI
 
 <br/>
 
-## **`Deployment`** 
+## Deployment
 
 Para realizar el deploy de la aplicación, se utilizó Deta.
 
 <br/>
 
-## **`Video`**
+## Video
 
 Click [aquí](https://drive.google.com/file/d/17gLBc4XtgWop3dHuooTPiwhvnvT0qcCY/view?usp=sharing) para ver un pequeño resumen
 
 <br/>
 
-## **`Contacto`**
-
+## Contacto
+  
 Tambien dejo mi perfil de [LinkedIn](https://www.linkedin.com/in/mat%C3%ADasgarroalou/), donde estaré publicando proximos proyectos
 
 <br/>
