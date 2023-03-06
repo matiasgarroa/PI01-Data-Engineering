@@ -1,5 +1,3 @@
-<p align=center><img src=https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png><p>
-
 # <h1 align=center> **PROYECTO INDIVIDUAL Nº1** </h1>
 
 # <h1 align=center>**`Data Engineering`**</h1>
@@ -51,22 +49,14 @@ Para disponibilizar los datos, se construyó una API usando el framework FastAPI
 
 <b>El link a mi [API](https://8wj1za.deta.dev/docs) aquí: https://8wj1za.deta.dev/docs</b>
 
-<br/>
-
 ## Deployment
 
 Para realizar el deploy de la aplicación, se utilizó Deta.
-
-<br/>
 
 ## Video
 
 Click [aquí](https://drive.google.com/file/d/17gLBc4XtgWop3dHuooTPiwhvnvT0qcCY/view?usp=sharing) para ver un pequeño resumen
 
-<br/>
-
 ## Contacto
   
 Tambien dejo mi perfil de [LinkedIn](https://www.linkedin.com/in/mat%C3%ADasgarroalou/), donde estaré publicando proximos proyectos
-
-<br/>
