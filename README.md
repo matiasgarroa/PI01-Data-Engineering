@@ -1,62 +1,51 @@
-# <h1 align=center> **PROYECTO INDIVIDUAL Nº1** </h1>
+# **PROYECTO DATA ENGINEER - Matias Garro Alou**
 
-# <h1 align=center>**`Data Engineering`**</h1>
+## ***Contexto y rol del proyecto:***
 
-# <h1 align=center>**`Matias Garro Alou - DTS-06`**</h1>
-
-<p align="center">
-<img src="https://files.realpython.com/media/What-is-Data-Engineering_Watermarked.607e761a3c0e.jpg"  height=300>
+<p>El departamento de data analysis requiere realizar consultas a diversos datasets de las principales plataformas de streaming de series y películas (amazon prime, netflix, etc).
+</p>
+<p>Para ello, primero se debe aplicar un proceso de <strong>limpieza y transformación de los datasets (ETL)</strong>.</p>
+<p>Luego, realizar las consultas específicas y disponibilizar los datos mediante la creación y ejecución de una <em>API</em>.
 </p>
 
-Este es mi primer proyecto individual en el rol de Data Engineer. El objetivo de este proyecto es construir una API usando el framework FastAPI que permita consultar información transformada de diferentes datasets.
+## ***Transformaciones requeridas:***
++ Generar campo **`id`**: Cada id se compondrá de la primera letra del nombre de la plataforma, seguido del show_id ya presente en los datasets (ejemplo para títulos de Amazon = **`as123`**)
 
-<hr>  
++ Los valores nulos del campo rating deberán reemplazarse por el string “**`G`**” (corresponde al maturity rating: “general for all audiences”
 
-## Contexto
++ De haber fechas, deberán tener el formato **`AAAA-mm-dd`**
 
-En este proyecto, me desempeñé como parte del equipo de data de una empresa. El área de análisis de datos le solicitó al área de Data Engineering ciertos requerimientos para el óptimo desarrollo de sus actividades. Mi tarea fue elaborar las transformaciones requeridas y disponibilizar los datos mediante la elaboración y ejecución de una API.
++ Los campos de texto deberán estar en **minúsculas**, sin excepciones
 
-<p align=center>
-<img src = 'https://i.ibb.co/9t3dD7D/blog-zenvia-imagens-3.png' height=250><p>
++ El campo ***duration*** debe convertirse en dos campos: **`duration_int`** y **`duration_type`**. El primero será un integer y el segundo un string indicando la unidad de medición de duración: min (minutos) o season (temporadas)
 
-## Transformaciones
+## ***Consultas requeridas:***
++ Cantidad de veces que aparece una keyword en el título de peliculas/series, por plataforma
 
-Para este proyecto, se realizaron las siguientes transformaciones en los datos:
++ Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
 
-+ Generación de campo id: Cada id se compone de la primera letra del nombre de la plataforma, seguido del show_id ya presente en los datasets.
-+ Los valores nulos del campo rating fueron reemplazados por el string “G” (corresponde al maturity rating: “general for all audiences”).
-+ Cambio de formato de fecha a AAAA-mm-dd.
-+ El campo duration se divide en dos campos: duration_int y duration_type. El primero de tipo integer y el segundo de tipo string indicando la unidad de medición de duración: min (minutos) o season (temporadas).
-+ Los campos de texto pasan a estar en minúsculas, sin excepciones.
-  
-<br/>
++ La segunda película con mayor score para una plataforma determinada, según el orden alfabético de los títulos.
 
-## Desarrollo API
++ Película que más duró según año, plataforma y tipo de duración
 
-Para disponibilizar los datos, se construyó una API usando el framework FastAPI. Los analistas de datos requieren consultar la siguiente información:
++ Cantidad de series y películas por rating
 
-+ ***get_word_count():***Cantidad de veces que aparece una keyword en el título de peliculas/series, por plataforma
+## ***Ejecución del proyecto:***
+Debido a que todos los datasets presentaban la misma estructura y forma, en el archivo ***`“data.py”`*** decidí crear una función que automáticamente limpie y transforme los datos de cada dataset.
 
-+ ***get_score_count():***Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
+Recibiendo únicamente un argumento (la ruta del dataset), la función retorna un dataframe de pandas con el formato deseado
 
-+ ***get_second_score():***La segunda película con mayor score para una plataforma determinada, según el orden alfabético de los títulos.
+Luego de aplicar la función creada a cada dataset, decidí concatenar todos para formar una única fuente de datos y exportarla con el nombre ***`“data.csv”`***
 
-+ ***get_longuest():***Película que más duró según año, plataforma y tipo de duración
+En el archivo ***`“main.py”`*** cargué el dataset ya limpio y comencé a crear la API y diseñar cada uno de las consultas requeridas
 
-+ ***get_rating_count():***Cantidad de series y películas por rating
+Decidí utilizar la librería de **FastAPI** para crear mi API debido a su sencillez y eficacia.
 
-<br/>
+Una vez creadas todas las consultas y verificar que la API devuelve los valores correctos, utilicé **Deta** para realizar el deployment de la API y que los analistas puedan acceder a ella de manera pública por internet.
 
-<b>El link a mi [API](https://8wj1za.deta.dev/docs) aquí: https://8wj1za.deta.dev/docs</b>
+### **Accediendo a este link (https://8wj1za.deta.dev/docs) se pueden visualizar y realizar las consultas requeridas desde la API**.
 
-## Deployment
-
-Para realizar el deploy de la aplicación, se utilizó Deta.
-
-## Video
-
-Click [aquí](https://drive.google.com/file/d/17gLBc4XtgWop3dHuooTPiwhvnvT0qcCY/view?usp=sharing) para ver un pequeño resumen
-
-## Contacto
-  
-Tambien dejo mi perfil de [LinkedIn](https://www.linkedin.com/in/mat%C3%ADasgarroalou/), donde estaré publicando proximos proyectos
+### **Video Explicativo: [Click aquí](https://drive.google.com/file/d/17gLBc4XtgWop3dHuooTPiwhvnvT0qcCY/view?usp=sharing)**. <br>
+### ***Linkedin***: [https://www.linkedin.com/in/matiasgarroalou/](https://www.linkedin.com/in/matiasgarroalou/)<br>
+### ***GitHub***: [https://github.com/matiasgarroa](https://github.com/matiasgarroa)</p>
+### ***Email***: matiasgarroalou@gmail.com</p>
